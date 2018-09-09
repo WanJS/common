@@ -1,14 +1,18 @@
 {
-  "name": "ethereum-common",
-  "version": "0.2.1",
-  "description": "Resources common to all Ethereum implementations",
+  "name": "wanchain-common",
+  "version": "0.3.0",
+  "description": "Resources common to all Wanchain implementations",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/index.js"
+    "test:coverage": "nyc npm run test:unit && npm run test:coveralls-upload",
+    "test:coveralls-upload": "if [ $COVERALLS_REPO_TOKEN ]; then nyc report --reporter=text-lcov | coveralls; fi",
+    "lint": "standard",
+    "test:unit": "node tests/",
+    "test": "npm run lint && node tests/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereumjs/common.git"
+    "url": "git+https://github.com/WanJS/wanchain-common.git"
   },
   "keywords": [
     "ethereum"
@@ -16,16 +20,19 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethereumjs/common/issues"
+    "url": "https://github.com/WanJS/wanchain-common/issues"
   },
-  "homepage": "https://github.com/ethereumjs/common",
+  "homepage": "https://github.com/WanJS/wanchain-common",
   "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nyc": "^13.0.1",
+    "standard": "^12.0.1",
     "tape": "^4.2.0"
   },
   "maintainers": [
     {
-      "name": "null_radix",
-      "email": "mjbecze@gmail.com"
+      "name": "Tyrion70",
+      "email": "tyrion70@gmail.com"
     }
   ]
 }
