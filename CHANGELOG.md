@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [0.3.0] - 2018-09-09
+- Updates for Wanchain
+
+[0.3.0]: https://github.com/WanJS/wanchain-common/compare/v0.2.1...v0.3.0
+
 ## [0.2.1] - 2017-11-08
 - Updated bootstrap nodes list (``bootstrapNodes.json``)
 - More detailed bootstrap node context info like ``network`` or ``location``
